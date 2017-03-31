@@ -6,10 +6,9 @@ var directiveMadness = angular.module('directiveMadness', []);
 //   ['$scope', function( $scope ){
 
 
-directiveMadness.directive('topNav', function() {
+directiveMadness.directive('mainNav', function() {
   return {
     templateUrl: 'nav.html',
-    restrict: 'A',
-    scope: {}
+    restrict: 'E'
   };
 });
