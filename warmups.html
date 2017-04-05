@@ -2,12 +2,35 @@
 <html ng-app = "directiveMadness" >
   <head>
     <title>Warmups</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js" ></script>
     <script src = "app.js" ></script>
   </head>
 
   <body>
     <main-nav></main-nav>
+
+    <p ng-hide="choice">No button selected</p>
+    <p ng-if="choice % 2 === 0 ">The button selection is even</p>
+    <p ng-if="choice % 2 === 1">The button selection is odd</p>
+    <p ng-if="choice">The selected button is number {{choice}}</p>
+    <form>
+      <input type="radio" name="test" value="1" ng-model="choice">1<br>
+      <input type="radio" name="test" value="2" ng-model="choice">2<br>
+      <input type="radio" name="test" value="3" ng-model="choice">3<br>
+      <input type="radio" name="test" value="4" ng-model="choice">4<br>
+      <input type="radio" name="test" value="5" ng-model="choice">5<br>
+    </form>
+
+    <main-header>I'm mad about directives!</main-header>
+
+    <p colorize color="green" background="red">Colorize</p>
+
+    <p mouse-events>Mouse is currently: <span id="mouse-button">Up</span></p>
+    <p mouse-events>Hover state: <span id="hover-state">LEAVE</span></p>
+    <button mouse-events id="click-button">I'm clickable</button>
+
+    <copyright>Copyright Warmups Inc.</copyright>
   </body>
 
 </html>
