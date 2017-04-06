@@ -1,0 +1,15 @@
+<table class="table" ng-show="quotes.length">
+  <thead>
+    <tr>
+      <th>Quote</th>
+      <th>Author</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="quote in quotes">
+      <td>{{ quote.text }}</td>
+      <td>{{ quote.author}}</td>
+    </tr>
+  </tbody>
+</table>
+<p class="text-center" ng-hide="quotes.length">Be the first to add a quote!</p>

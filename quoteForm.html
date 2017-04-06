@@ -1,0 +1,7 @@
+<form ng-submit="addQuote(quote, newQuote, newQuote.$valid)" id="quote-form" name="newQuote">
+  <p ng-show="newQuote.text.$invalid && newQuote.text.$touched">Quote must be at least 2 characters</p>
+  <label>Text: <input name="text" ng-model="quote.text" type="text" ng-minlength="2"></label>
+  <p ng-show="newQuote.author.$invalid && newQuote.author.$touched">Author's name must be between 2 and 32 characters</p>
+  <label>Author: <input name="author" ng-model="quote.author" type="text" ng-minlength="2" ng-maxlength="32"></label>
+  <input type="submit">
+</form>
