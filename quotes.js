@@ -13,6 +13,11 @@ directiveMadness.controller('QuotesCtrl', ['$scope', function($scope) {
     }
   };
 
+  $scope.deleteQuote = function(quote) {
+    var i = $scope.quotes.indexOf(quote);
+    $scope.quotes.splice(i, 1);
+  };
+
 }]);
 
 directiveMadness.directive('quoteForm', function() {

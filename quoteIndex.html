@@ -9,6 +9,7 @@
     <tr ng-repeat="quote in quotes">
       <td>{{ quote.text }}</td>
       <td>{{ quote.author}}</td>
+      <td><button ng-click="deleteQuote(quote)">Delete</button></td>
     </tr>
   </tbody>
 </table>
