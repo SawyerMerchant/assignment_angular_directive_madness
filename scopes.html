@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="directiveMadness">
+
+  <head>
+    <meta charset="utf-8"></meta>
+    <title>Directive Madness - Scopes</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+
+    <script src="app.js"></script>
+    <script src="scopes.js"></script>
+
+  </head>
+
+  <body ng-controller="ScopesCtrl">
+    <main-nav></main-nav>
+    <main-header>Mad about scopes</main-header>
+    <h1>One Way</h1>
+    <label>
+      One Way
+      <input type="text" ng-model="oneWay">
+      <p>{{ oneWay }}</p>
+    </label>
+    <br>
+    <label>
+      Two Way
+      <input type="text" ng-model="twoWay">
+      <p>{{ twoWay }}</p>
+    </label>
+    <h1>Two way</h1>
+    <isolated one-way="{{ oneWay }}" two-way="twoWay" say-hello="sayHello(name)"></isolated>
+
+    <copyright>Scopes</copyright>
+  </body>
+</html>
